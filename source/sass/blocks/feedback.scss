@@ -1,0 +1,86 @@
+.feedback {
+  background: url("../../img/bg-feedback-desktop.png") center / cover no-repeat;
+}
+
+.container__feedback {
+  padding: 170px 0 250px 640px;
+  background: url("../../img/paper-airplane-desktop.png") center left / 510px 285px no-repeat;
+}
+
+.feedback__title {
+  font-family: $ff-main;
+  color: $color-default-white;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.feedback__description {
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.feedback__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &--user-data {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--user-question {
+    margin-bottom: 35px;
+  }
+}
+
+.feedback__fieldset input {
+  background-color: rgba(4, 20, 39, 0.15);
+  padding: 15px;
+  border: none;
+  color: $color-default-white;
+  font-family: $ff-secondary;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  width: 275px;
+}
+
+.feedback__fieldset textarea {
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  color: $color-default-white;
+  font-family: $ff-secondary;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  padding: 25px 15px 25px;
+  width: 100%;
+  min-height: 155px;
+}
+
+.feedback__footer {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox__container input {
+  margin-right: 12px;
+}
+
+.checkbox__label {
+  color: $color-default-white;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}

@@ -1,0 +1,33 @@
+.intro {
+  background-image: url("../../img/background-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container__intro {
+  max-width: 720px;
+  text-align: left;
+  padding: 305px 0 280px;
+}
+
+.intro__title {
+  color: $color-default-white;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-family: $ff-main;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.intro__description {
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 22px;
+  line-height: 34px;
+  font-family: $ff-secondary;
+}

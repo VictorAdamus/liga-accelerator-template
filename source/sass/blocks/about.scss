@@ -1,0 +1,27 @@
+.about {
+  background-color: $color-default-background;
+}
+
+.container__about {
+  max-width: 1220px;
+  padding: 5px 0 120px 250px;
+  background-image: url("../../img/background-2022.png");
+  background-repeat: no-repeat;
+}
+
+.about__title {
+  font-family: $ff-main;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.about__description {
+  font-family: $ff-secondary;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  margin-bottom: 20px;
+}
