@@ -133,7 +133,7 @@
                   <label class="visually-hidden" for="name">Введите имя.</label>
                   <input type="text" id="name" name="Name" placeholder="Имя" required>
                   <label class="visually-hidden" for="tel">Введите номер телефона.</label>
-                  <input type="text" id="tel" name="Tel" placeholder="Телефон" required>
+                  <input type="text" id="tel" name="Tel" placeholder="Телефон" data-input-name="tel" required>
                 </fieldset>
                 <fieldset class="feedback__fieldset feedback__fieldset--user-question">
                   <label class="visually-hidden" for="question">Введите Ваш вопрос.</label>
@@ -260,7 +260,7 @@
               <label class="visually-hidden" for="name">Введите имя.</label>
               <input type="text" id="name" name="Name" placeholder="Имя" data-input-name="focus" required autofocus>
               <label class="visually-hidden" for="tel">Введите номер телефона.</label>
-              <input type="text" id="tel" name="Tel" placeholder="Телефон" required>
+              <input type="text" id="tel" name="Tel" placeholder="Телефон" data-input-name="tel" required>
               <label class="visually-hidden" for="question">Введите Ваш вопрос.</label>
               <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
             </fieldset>
@@ -282,6 +282,7 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
