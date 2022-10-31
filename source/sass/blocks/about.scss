@@ -3,10 +3,21 @@
 }
 
 .container__about {
-  max-width: 1220px;
-  padding: 5px 0 120px 250px;
+  max-width: 1260px;
+  padding: 5px 20px 120px 270px;
+  margin: 0 auto;
   background-image: url("../../img/background-2022.png");
   background-repeat: no-repeat;
+  background-position: 40px top;
+
+  @include vp-767 {
+    padding: 0 50px 80px 225px;
+  }
+
+  @include vp-374 {
+    background: none;
+    padding: 0 25px 80px;
+  }
 }
 
 .about__title {
@@ -16,6 +27,10 @@
   font-weight: 400;
   margin: 0;
   margin-bottom: 15px;
+  @include vp-374 {
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 .about__description {
@@ -24,4 +39,9 @@
   line-height: 21px;
   margin: 0;
   margin-bottom: 20px;
+
+  @include vp-374 {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }

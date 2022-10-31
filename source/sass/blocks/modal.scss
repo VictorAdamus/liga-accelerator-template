@@ -59,10 +59,10 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
+    background-color: $color-neon-blue;
 
     @include vp-767 {
       width: 100%;
@@ -72,15 +72,16 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 20px;
+    right: 20px;
     z-index: 1;
-
     width: 40px;
     height: 40px;
     padding: 0;
-
-    background: $color-transparent;
+    background-color: $color-transparent;
+    background-image: url("../../img/svg/popuap-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
     cursor: pointer;
   }
@@ -117,3 +118,77 @@
     pointer-events: auto;
   }
 }
+
+.modal__title {
+  font-family: $ff-main;
+  color: $color-default-white;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.modal__description {
+  font-size: 16px;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.modal__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &--user-data {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--user-question {
+    margin-bottom: 35px;
+  }
+}
+
+.modal__fieldset input {
+  background-color: rgba(4, 20, 39, 0.15);
+  padding: 15px;
+  border: none;
+  color: $color-default-white;
+  font-family: $ff-secondary;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.modal__fieldset textarea {
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  color: $color-default-white;
+  font-family: $ff-secondary;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  padding: 25px 15px 25px;
+  width: 100%;
+  min-height: 155px;
+  margin-bottom: 25px;
+}
+
+.modal__form .btn {
+  margin: 0;
+  max-width: 420px;
+  margin-bottom: 20px;
+}
+
+.modal__footer {
+  display: flex;
+  align-items: center;
+}
+
