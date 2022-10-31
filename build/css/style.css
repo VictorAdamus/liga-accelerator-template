@@ -904,6 +904,8 @@ button,
   background: -o-linear-gradient(top, #041827 85%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(to bottom, #041827 85%, rgba(4, 24, 39, 0) 100%);
   z-index: 1;
+  position: fixed;
+  width: 100%;
 }
 
 .header__link {
@@ -1019,16 +1021,16 @@ button,
   font-weight: 400;
 }
 
-.advantages__item--selected {
+.advantages__item:hover {
   background-color: #00b2ff;
 }
 
-.advantages__item--selected .advantages__title,
-.advantages__item--selected .advantages__description {
+.advantages__item:hover .advantages__title,
+.advantages__item:hover .advantages__description {
   color: #f2f5f6;
 }
 
-.advantages__item--selected .advantages__icon {
+.advantages__item:hover .advantages__icon {
   fill: #f2f5f6;
 }
 

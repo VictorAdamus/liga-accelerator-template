@@ -82,15 +82,15 @@
   }
 }
 
-.advantages__item--selected {
+.advantages__item:hover {
   background-color: $color-neon-blue;
 }
 
-.advantages__item--selected .advantages__title,
-.advantages__item--selected .advantages__description {
+.advantages__item:hover .advantages__title,
+.advantages__item:hover .advantages__description {
   color: $color-default-white;
 }
 
-.advantages__item--selected .advantages__icon {
+.advantages__item:hover .advantages__icon {
   fill: $color-default-white;
 }

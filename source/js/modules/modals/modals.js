@@ -1,5 +1,5 @@
-import {ScrollLock} from '../../utils/scroll-lock';
-import {FocusLock} from '../../utils/focus-lock';
+import { ScrollLock } from '../../utils/scroll-lock';
+import { FocusLock } from '../../utils/focus-lock';
 
 export class Modals {
   constructor(settings = {}) {
@@ -135,7 +135,7 @@ export class Modals {
 
   open(modalName = this._modalName) {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
-
+    const inputModalName = modal.querySelector('[data-input-name]');
     if (!modal || modal.classList.contains('is-active')) {
       return;
     }
@@ -168,6 +168,9 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+      if (inputModalName) {
+        inputModalName.focus();
+      }
     }, this._eventTimeout);
   }
 

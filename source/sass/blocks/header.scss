@@ -21,6 +21,8 @@
 .header {
   background: $black-to-bottom;
   z-index: 1;
+  position: fixed;
+  width: 100%;
 }
 
 .header__link {
