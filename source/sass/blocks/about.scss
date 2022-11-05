@@ -26,7 +26,7 @@
   line-height: 50px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 15px;
+
   @include vp-374 {
     font-size: 28px;
     line-height: 39px;
@@ -37,11 +37,29 @@
   font-family: $ff-secondary;
   font-size: 16px;
   line-height: 21px;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 20px 0;
 
   @include vp-374 {
     font-size: 14px;
     line-height: 18px;
+  }
+}
+
+.about--extra-mobile {
+  @include vp-374 {
+    display: none;
+  }
+}
+
+.about--extra-mobile {
+  @include vp-767 {
+    display: block;
+    margin-top: -20px;
+  }
+}
+
+.about--extra-desktop {
+  @include vp-767 {
+    display: none;
   }
 }

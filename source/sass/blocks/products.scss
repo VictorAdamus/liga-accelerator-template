@@ -3,16 +3,16 @@
 }
 
 .container__products {
-  padding: 70px 20px 140px;
+  padding: 70px 20px 120px;
   margin: 0 auto;
   max-width: 1260px;
 
   @include vp-767 {
-    padding: 60px 50px 75px;
+    padding: 60px 50px 55px;
   }
 
   @include vp-374 {
-  padding: 50px 25px 85px;
+    padding: 50px 25px 65px;
   }
 }
 
@@ -32,22 +32,23 @@
   &--mobile {
     display: none;
 
-  @include vp-374 {
-    display: block;
-    color: $color-default-white;
-    font-family: $ff-main;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 39px;
-    margin: 0;
-    margin-bottom: 40px;
-  }
+    @include vp-374 {
+      display: block;
+      color: $color-default-white;
+      font-family: $ff-main;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 39px;
+      margin: 0;
+      margin-bottom: 40px;
+    }
   }
 }
 
 .products__list {
   margin: 0;
   padding: 0;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
@@ -66,7 +67,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 0 545px 40px;
+  padding: 50px 0 0 40px;
+  min-height: 650px;
   cursor: pointer;
 
   &::before {
@@ -90,39 +92,74 @@
   }
 
   &--production {
-    background-image: url("../../img/cart-1-bg-desktop.png");
+    background-image: image-set(
+      url("../../img/cart-1-desktop.png") 1x,
+      url("../../img/cart-1-desktop@x2.png") 2x
+    );
+
     @include vp-767 {
-      background-image: url("../../img/cart-1-tablet.png");
+      background-image: image-set(
+        url("../../img/cart-1-tablet.png") 1x,
+        url("../../img/cart-1-tablet@x2.png") 2x
+      );
     }
+
     @include vp-374 {
-      background-image: url("../../img/cart-1-mobile.png");
+      background-image: image-set(
+        url("../../img/cart-1-mobile.png") 1x,
+        url("../../img/cart-1-mobile@x2.png") 2x
+      );
     }
   }
 
   &--montage {
-    background-image: url("../../img/cart-2-bg-desktop.png");
+    background-image: image-set(
+      url("../../img/cart-2-desktop.png") 1x,
+      url("../../img/cart-2-desktop@x2.png") 2x
+    );
+
     @include vp-767 {
-      background-image: url("../../img/cart-2-tablet.png");
+      background-image: image-set(
+      url("../../img/cart-2-tablet.png") 1x,
+      url("../../img/cart-2-tablet@x2.png") 2x
+    );
     }
+
     @include vp-374 {
-      background-image: url("../../img/cart-2-mobile.png");
+      background-image: image-set(
+      url("../../img/cart-2-mobile.png") 1x,
+      url("../../img/cart-2-mobile@x2.png") 2x
+    );
     }
   }
 
   &--components {
-    background-image: url("../../img/cart-3-bg-desktop.png");
+    background-image: image-set(
+      url("../../img/cart-3-desktop.png") 1x,
+      url("../../img/cart-3-desktop@x2.png") 2x
+    );
+
     @include vp-767 {
-      background-image: url("../../img/cart-3-tablet.png");
+      background-image: image-set(
+      url("../../img/cart-3-tablet.png") 1x,
+      url("../../img/cart-3-tablet@x2.png") 2x
+    );
     }
+
     @include vp-374 {
-      background-image: url("../../img/cart-3-mobile.png");
+      background-image: image-set(
+      url("../../img/cart-3-mobile.png") 1x,
+      url("../../img/cart-3-mobile@x2.png") 2x
+    );
     }
   }
 
   @include vp-767 {
-    padding: 40px 0 155px 45px;
+    padding: 40px 0 0 45px;
     width: 100%;
+    min-height: 250px;
   }
+
   @include vp-374 {
     padding: 30px;
     min-height: 250px;

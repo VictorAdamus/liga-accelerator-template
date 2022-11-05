@@ -9,7 +9,7 @@
   flex-wrap: wrap;
 
   @include vp-767 {
-    padding: 15px 70px 10px 50px;
+    padding: 15px 70px 30px 50px;
     justify-content: flex-start;
   }
 
@@ -25,33 +25,29 @@
   width: 100%;
 }
 
+.header__logo-picture {
+  @include vp-767 {
+    width: 215px;
+    height: 55px;
+  }
+
+  @include vp-374 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .header__link {
   color: $color-default-white;
   display: flex;
   align-items: center;
   padding: 10px;
-
-  &--logo {
-    display: block;
-    width: 215px;
-    height: 55px;
-    background-image: url("../../img/svg/logo-desktop.svg");
-    background-position: center;
-
-    @include vp-767{
-      margin-right: auto;
-    }
-
-    @include vp-374 {
-      width: 35px;
-      height: 35px;
-      background-image: url("../../img/svg/logo-header-mobile.svg");
-    }
-  }
+  cursor: pointer;
 
   &--post {
     @include vp-767 {
       margin-right: 20px;
+      margin-left: auto;
     }
   }
 }

@@ -1,3 +1,5 @@
+// плавный скролл к форме обратной связи
+
 const scrollToFeedback = () => {
   const scrollToFormBtn = document.querySelector('[data-scroll-form]');
   const feedback = document.querySelector('[data-feedback]');
