@@ -2,7 +2,7 @@
   background-color: $color-default-black;
 }
 
-.container__footer {
+.footer__container {
   max-width: 1260px;
   margin: 0 auto;
   padding: 50px 20px 55px;
@@ -60,19 +60,22 @@
 
 .footer__section {
   @include vp-374 {
-    padding: 20px 25px;
+    padding: 20px 25px 0;
     margin: 0;
     border-bottom: 1px solid $color-tansparent-grey;
   }
 }
 
-.footer__menu,
-.footer__contacts {
+.footer__list {
   padding: 0;
   margin: 0;
+
+  @include vp-374 {
+    display: none;
+  }
 }
 
-.footer__menu {
+.footer__list--menu {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(4, auto);
@@ -84,14 +87,12 @@
   }
 }
 
-.menu__item,
-.contacts__item {
+.footer__item {
   list-style-type: none;
   margin-bottom: 10px;
 }
 
-.menu__link,
-.contacts__link {
+.footer__link {
   font-family: $ff-secondary;
   font-size: 16px;
   font-weight: 400;
@@ -101,7 +102,7 @@
   cursor: pointer;
 }
 
-.footer__title {
+.footer__section h2{
   position: relative;
   font-family: $ff-main;
   color: $color-default-white;
@@ -128,7 +129,6 @@
     }
   }
 
-
   &::before {
     content: "";
     display: none;
@@ -147,17 +147,22 @@
 
   @include vp-374 {
     margin-bottom: 0;
+    padding-bottom: 20px;
     cursor: pointer;
   }
 }
 
-.accordion--active::before {
-  background-color: transparent;
+.footer__section .footer__title--acc::before {
+  display: none;
 }
 
-.section__social {
-  padding: 0;
-  margin: 0;
+.footer__link--show {
+  @include vp-374 {
+    display: block;
+  }
+}
+
+.footer__list--social {
   margin-left: 10px;
   display: flex;
   width: 150px;
@@ -168,7 +173,7 @@
   }
 }
 
-.section__logo-link {
+.footer__logo-link {
   display: block;
   margin-bottom: 35px;
 
@@ -181,6 +186,6 @@
   }
 }
 
-.social__icon {
+.footer__social-icon {
   fill: $color-default-background;
 }

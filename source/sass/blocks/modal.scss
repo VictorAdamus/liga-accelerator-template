@@ -70,6 +70,7 @@
     }
   }
 
+
   &__close-btn {
     position: absolute;
     top: 20px;
@@ -114,76 +115,41 @@
   }
 }
 
-.modal__title {
-  font-family: $ff-main;
-  color: $color-default-white;
+.form h2 {
   font-size: 30px;
-  font-weight: 400;
   line-height: 42px;
-  margin: 0;
-  margin-bottom: 15px;
 }
 
-.modal__description {
+.form p {
   font-size: 16px;
-  color: $color-default-white;
-  margin: 0;
   margin-bottom: 40px;
 }
 
-.modal__fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-
-  &--user-data {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &--user-question {
-    margin-bottom: 35px;
-  }
+.form__field--modal {
+  min-width: none;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
-.modal__fieldset input {
-  background-color: rgba(4, 20, 39, 0.15);
-  padding: 15px;
-  border: none;
-  color: $color-default-white;
-  font-family: $ff-secondary;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 3px;
+.form__field--modal input {
+  max-width: 100%;
 }
 
-.modal__fieldset textarea {
-  background-color: rgba(4, 20, 39, 0.15);
-  border: none;
-  border-radius: 3px;
-  color: $color-default-white;
-  font-family: $ff-secondary;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-  padding: 25px 15px 25px;
-  width: 100%;
-  min-height: 155px;
+.form--modal textarea {
+  margin-left: 0;
   margin-bottom: 25px;
 }
 
-.modal__form .btn {
+.modal__content .btn {
   margin: 0;
   max-width: 420px;
   margin-bottom: 20px;
 }
 
-.modal__footer {
+.form__footer--modal {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
-

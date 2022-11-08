@@ -2,11 +2,11 @@
   background-color: $color-default-background;
 }
 
-.container__about {
+.about__container {
   max-width: 1260px;
   padding: 5px 20px 120px 270px;
   margin: 0 auto;
-  background-image: url("../../img/background-2022.png");
+  background-image: url("../img/background-2022.png");
   background-repeat: no-repeat;
   background-position: 40px top;
 
@@ -20,7 +20,7 @@
   }
 }
 
-.about__title {
+.about h2 {
   font-family: $ff-main;
   font-size: 36px;
   line-height: 50px;
@@ -33,7 +33,7 @@
   }
 }
 
-.about__description {
+.about p {
   font-family: $ff-secondary;
   font-size: 16px;
   line-height: 21px;
@@ -45,21 +45,6 @@
   }
 }
 
-.about--extra-mobile {
-  @include vp-374 {
-    display: none;
-  }
-}
-
-.about--extra-mobile {
-  @include vp-767 {
-    display: block;
-    margin-top: -20px;
-  }
-}
-
-.about--extra-desktop {
-  @include vp-767 {
-    display: none;
-  }
+.about__extra-text {
+  display: none;
 }

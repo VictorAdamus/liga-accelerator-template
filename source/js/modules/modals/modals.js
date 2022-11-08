@@ -135,7 +135,7 @@ export class Modals {
 
   open(modalName = this._modalName) {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
-    const inputModalName = modal.querySelector('[data-input-name]');
+    const inputModalName = modal.querySelector('[data-input-name="focus"]');
     if (!modal || modal.classList.contains('is-active')) {
       return;
     }

@@ -1,4 +1,6 @@
 // маска для номера телефона в форме обратной связи
+import IMask from 'imask';
+
 const maskForTel = () => {
   const inputTelList = document.querySelectorAll('[data-input-name="tel"]');
   const maskOptions = {

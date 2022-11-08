@@ -2,7 +2,7 @@
   background-color: $color-default-background;
 }
 
-.container__advantages {
+.advantages__container {
   max-width: 1260px;
   padding: 120px 20px;
   margin: 0 auto;
@@ -52,7 +52,7 @@
   fill: $color-neon-blue;
 }
 
-.advantages__title {
+.advantages__item h3 {
   color: $color-neon-blue;
   font-family: $ff-main;
   font-size: 24px;
@@ -67,7 +67,7 @@
   }
 }
 
-.advantages__description {
+.advantages p {
   color: $color-default-black;
   font-family: $ff-secondary;
   font-size: 16px;
@@ -85,8 +85,8 @@
   background-color: $color-neon-blue;
 }
 
-.advantages__item:hover .advantages__title,
-.advantages__item:hover .advantages__description {
+.advantages__item:hover > h3,
+.advantages__item:hover > p {
   color: $color-default-white;
 }
 
