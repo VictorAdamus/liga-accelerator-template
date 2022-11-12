@@ -7,11 +7,11 @@
   padding: 120px 20px;
   margin: 0 auto;
 
-  @include vp-767 {
+  @include vp-1023 {
     padding: 80px 50px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     padding: 50px 25px;
   }
 }
@@ -23,7 +23,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 
-  @include vp-374 {
+  @include vp-767 {
     grid-template-columns: 1fr;
   }
 }
@@ -37,11 +37,11 @@
   box-sizing: border-box;
   cursor: pointer;
 
-  @include vp-767 {
+  @include vp-1023 {
     padding: 40px 40px 35px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     min-height: 325px;
     padding: 30px;
   }
@@ -61,7 +61,7 @@
   margin-bottom: 15px;
   font-weight: 400;
 
-  @include vp-374 {
+  @include vp-767 {
     font-size: 20px;
     line-height: 28px;
   }
@@ -75,7 +75,7 @@
   margin: 0;
   font-weight: 400;
 
-  @include vp-374 {
+  @include vp-767 {
     font-size: 14px;
     line-height: 19px;
   }

@@ -8,12 +8,12 @@
   align-items: center;
   flex-wrap: wrap;
 
-  @include vp-767 {
-    padding: 15px 70px 30px 50px;
+  @include vp-1023 {
+    padding: 15px 70px 25px 50px;
     justify-content: flex-start;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     padding: 10px 35px 20px;
   }
 }
@@ -23,15 +23,19 @@
   z-index: 1;
   position: fixed;
   width: 100%;
+
+  @include vp-1023 {
+    position: absolute;
+  }
 }
 
 .header__logo-picture {
-  @include vp-767 {
+  @include vp-1023 {
     width: 215px;
     height: 55px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     width: 35px;
     height: 35px;
   }
@@ -44,24 +48,32 @@
   padding: 10px;
   cursor: pointer;
 
+  &--logo {
+    padding: 0;
+  }
+
   &--post {
-    @include vp-767 {
+    @include vp-1023 {
       margin-right: 20px;
       margin-left: auto;
     }
+  }
+
+  @include hover {
+    color: $color-transparent-white;
   }
 }
 
 .header__link-icon {
   margin-right: 15px;
 
-  @include vp-767 {
+  @include vp-1023 {
     margin-right: 0;
   }
 }
 
 .header__link-text {
-  @include vp-767 {
+  @include vp-1023 {
     display: none;
   }
 }

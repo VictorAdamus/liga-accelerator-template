@@ -3,7 +3,7 @@ import { initModals } from './modules/modals/init-modals';
 import { scrollToFeedback } from './utils/scroll-to-form';
 import { maskForTel } from './utils/mask-for-tel';
 import { accordion } from './utils/accordion';
-import { extraTextHandler } from './utils/extraTextHandler';
+import { showText } from './utils/extraTextHandler';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -11,9 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
   accordion();
-  // window.addEventListener('resize', checkResizeWindow());
   maskForTel();
-  extraTextHandler();
+  showText();
   scrollToFeedback();
   iosVhFix();
 

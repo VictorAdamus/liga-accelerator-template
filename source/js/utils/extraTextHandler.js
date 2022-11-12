@@ -1,20 +1,22 @@
 // показать дополнительный текст
 
-const buttonElement = document.querySelector('[data-about-btn]');
-
 const showText = () => {
-  const textElement = document.querySelector('[data-about-text]');
-  if (buttonElement && textElement) {
-    if (textElement.style.display === 'none') {
-      textElement.style.display = 'block';
-      buttonElement.textContent = 'свернуть';
+  const buttonText = document.querySelector('[data-about-btn]');
+  const text = document.querySelector('[data-about-text]');
+  const textTablet = document.querySelector('[data-text-tablet]');
+  const textMobile = document.querySelector('[data-text-mobile]');
+  const showExtraText = () => {
+
+    if (textTablet.classList.contains('hide-text')) {
+      buttonText.textContent = 'свернуть';
     } else {
-      textElement.style.display = 'none';
-      buttonElement.textContent = 'подробнее';
+      buttonText.textContent = 'подробнее';
     }
-  }
+    text.classList.toggle('hide-text');
+    textTablet.classList.toggle('hide-text');
+    textMobile.classList.toggle('hide-text');
+  };
+  buttonText.addEventListener('click', showExtraText);
 };
 
-const extraTextHandler = () => buttonElement.addEventListener('click', showText);
-
-export { extraTextHandler };
+export { showText };

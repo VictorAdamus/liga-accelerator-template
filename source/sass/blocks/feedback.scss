@@ -1,7 +1,7 @@
 .feedback {
   background: url("../img/bg-feedback-desktop.png") center / cover no-repeat;
 
-  @include vp-767 {
+  @include vp-1023 {
     background: none;
   }
 }
@@ -15,13 +15,13 @@
   flex-wrap: wrap;
   background: url("../img/paper-airplane-desktop.png") center left / 510px 285px no-repeat;
 
-  @include vp-767 {
+  @include vp-1023 {
     background: none;
     background-color: $color-neon-blue;
     padding: 50px 50px 105px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     padding: 50px 25px 70px;
   }
 }
@@ -30,7 +30,7 @@
   min-width: 580px;
   max-width: 50%;
 
-  @include vp-767 {
+  @include vp-1023 {
     min-width: 100%;
   }
 }
@@ -44,7 +44,7 @@
   margin: 0;
   margin-bottom: 15px;
 
-  @include vp-374 {
+  @include vp-767 {
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 20px;
@@ -56,7 +56,7 @@
   margin: 0;
   margin-bottom: 35px;
 
-  @include vp-374 {
+  @include vp-767 {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 40px;
@@ -72,13 +72,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  margin-bottom: 20px;
 
-  @include vp-374 {
+  @include vp-767 {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  @include vp-767 {
+  @include vp-1023 {
     margin-left: 0;
     max-width: 100%;
   }
@@ -96,14 +97,17 @@
   width: 100%;
   max-width: 275px;
   border-radius: 3px;
-  margin-bottom: 20px;
 
   &::placeholder {
     color: #ffffff;
   }
 
+  @include vp-1023 {
+    max-width: none;
+  }
+
   @include vp-767 {
-    max-width: 320px;
+    max-width: none;
   }
 }
 
@@ -127,7 +131,7 @@
     color: #ffffff;
   }
 
-  @include vp-767 {
+  @include vp-1023 {
     margin-left: 0;
     min-width: 100%;
   }
@@ -140,12 +144,12 @@
   align-items: center;
   margin-left: 5px;
 
-  @include vp-767 {
-    grid-template-columns: 50% 50%;
+  @include vp-1023 {
+    gap: 85px;
     margin-left: 0;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     grid-template-columns: 100%;
     gap: 25px;
   }
@@ -172,7 +176,7 @@
   line-height: 16px;
   font-weight: 400;
 
-  @include vp-767 {
+  @include vp-1023 {
     max-width: 230px;
   }
 }

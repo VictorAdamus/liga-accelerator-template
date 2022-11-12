@@ -7,16 +7,16 @@
   margin: 0 auto;
   max-width: 1260px;
 
-  @include vp-767 {
+  @include vp-1023 {
     padding: 60px 50px 55px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     padding: 50px 25px 65px;
   }
 }
 
-.products h2 {
+.products__title {
   color: $color-default-white;
   font-family: $ff-main;
   font-weight: 400;
@@ -25,20 +25,21 @@
   margin: 0;
   margin-bottom: 50px;
 
-  @include vp-374 {
+  @include vp-767 {
     display: none;
   }
 
   &--mobile {
     display: none;
 
-    @include vp-374 {
+    @include vp-767 {
       display: block;
       color: $color-default-white;
       font-family: $ff-main;
       font-weight: 400;
       font-size: 28px;
       line-height: 39px;
+      padding-right: 10px;
       margin: 0;
       margin-bottom: 40px;
     }
@@ -55,7 +56,7 @@
   grid-column-gap: 85px;
   grid-row-gap: 30px;
 
-  @include vp-767 {
+  @include vp-1023 {
     grid-template-columns: 1fr;
   }
 }
@@ -86,7 +87,7 @@
     border-radius: 3px 0 0 0;
     background-size: 7px auto;
 
-    @include vp-374 {
+    @include vp-767 {
       width: 40px;
       height: 40px;
     }
@@ -98,14 +99,14 @@
       url("../img/cart-1-desktop@x2.png") 2x
     );
 
-    @include vp-767 {
+    @include vp-1023 {
       background-image: image-set(
         url("../img/cart-1-tablet.png") 1x,
         url("../img/cart-1-tablet@x2.png") 2x
       );
     }
 
-    @include vp-374 {
+    @include vp-767 {
       background-image: image-set(
         url("../img/cart-1-mobile.png") 1x,
         url("../img/cart-1-mobile@x2.png") 2x
@@ -119,14 +120,14 @@
       url("../img/cart-2-desktop@x2.png") 2x
     );
 
-    @include vp-767 {
+    @include vp-1023 {
       background-image: image-set(
       url("../img/cart-2-tablet.png") 1x,
       url("../img/cart-2-tablet@x2.png") 2x
     );
     }
 
-    @include vp-374 {
+    @include vp-767 {
       background-image: image-set(
       url("../img/cart-2-mobile.png") 1x,
       url("../img/cart-2-mobile@x2.png") 2x
@@ -140,14 +141,14 @@
       url("../img/cart-3-desktop@x2.png") 2x
     );
 
-    @include vp-767 {
+    @include vp-1023 {
       background-image: image-set(
       url("../img/cart-3-tablet.png") 1x,
       url("../img/cart-3-tablet@x2.png") 2x
     );
     }
 
-    @include vp-374 {
+    @include vp-767 {
       background-image: image-set(
       url("../img/cart-3-mobile.png") 1x,
       url("../img/cart-3-mobile@x2.png") 2x
@@ -155,13 +156,13 @@
     }
   }
 
-  @include vp-767 {
+  @include vp-1023 {
     padding: 40px 0 0 45px;
     width: 100%;
     min-height: 250px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     padding: 30px;
     min-height: 250px;
   }

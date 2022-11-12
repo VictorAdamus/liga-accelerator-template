@@ -21,7 +21,11 @@ const fun = () => {
 };
 
 const accordion = () => {
-  if (window.innerWidth < 375) {
+  const accordionList = document.querySelectorAll('[data-footer-list]');
+  if (document.documentElement.clientWidth < 767) {
+    accordionList.forEach((element) => {
+      element.style.display = 'none';
+    });
     fun();
   }
   return;
