@@ -16,8 +16,7 @@
   visibility: hidden;
   opacity: 0;
 
-  transition: opacity $trans-modal,
-    transform $trans-modal,
+  transition: opacity $trans-modal, transform $trans-modal,
     visibility $trans-modal;
 
   pointer-events: none;
@@ -70,7 +69,6 @@
     }
   }
 
-
   &__close-btn {
     position: absolute;
     top: 20px;
@@ -115,41 +113,8 @@
   }
 }
 
-.form h2 {
-  font-size: 30px;
-  line-height: 42px;
-}
-
-.form p {
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.form__field--modal {
-  min-width: none;
-  width: 100%;
-  grid-template-columns: 1fr;
-  gap: 0;
-}
-
-.form__field--modal input {
-  max-width: 100%;
-}
-
-.form--modal textarea {
-  margin-left: 0;
-  margin-bottom: 25px;
-}
-
 .modal__content .btn {
   margin: 0;
   max-width: 420px;
   margin-bottom: 20px;
-}
-
-.form__footer--modal {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
 }

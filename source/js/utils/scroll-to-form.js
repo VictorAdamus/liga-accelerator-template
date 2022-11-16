@@ -11,4 +11,4 @@ const scrollToFeedback = () => {
   });
 };
 
-export { scrollToFeedback };
+export {scrollToFeedback};

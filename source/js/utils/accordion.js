@@ -1,17 +1,17 @@
 // список-аккордион
 
-const fun = () => {
+const accordionToggle = () => {
   const accordionButtons = document.querySelectorAll('[data-footer-title]');
-  if (accordionButtons) {
+  if (accordionButtons && document.documentElement.clientWidth < 768) {
     accordionButtons.forEach((button) => {
       button.addEventListener('click', () => {
         if (button.classList.contains('footer__title--acc')) {
           button.nextElementSibling.style.display = 'none';
-          button.classList.remove('footer__title--acc');
+          button.classList.toggle('footer__title--acc');
           button.style.magrinBottom = '0';
         } else {
           button.nextElementSibling.style.display = 'block';
-          button.classList.add('footer__title--acc');
+          button.classList.toggle('footer__title--acc');
           button.style.magrinBottom = '15px';
         }
       });
@@ -20,16 +20,17 @@ const fun = () => {
   return;
 };
 
-const accordion = () => {
+const accordionHandler = () => {
   const accordionList = document.querySelectorAll('[data-footer-list]');
-  if (document.documentElement.clientWidth < 767) {
-    accordionList.forEach((element) => {
+  accordionList.forEach((element) => {
+    if (document.documentElement.clientWidth < 768) {
       element.style.display = 'none';
-    });
-    fun();
-  }
-  return;
+    } else {
+      element.style.display = 'block';
+    }
+  });
+  accordionToggle();
 };
 
 
-export { accordion };
+export {accordionHandler};

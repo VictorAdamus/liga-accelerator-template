@@ -5,18 +5,27 @@ const showText = () => {
   const text = document.querySelector('[data-about-text]');
   const textTablet = document.querySelector('[data-text-tablet]');
   const textMobile = document.querySelector('[data-text-mobile]');
-  const showExtraText = () => {
-
-    if (textTablet.classList.contains('hide-text')) {
-      buttonText.textContent = 'свернуть';
-    } else {
-      buttonText.textContent = 'подробнее';
-    }
-    text.classList.toggle('hide-text');
-    textTablet.classList.toggle('hide-text');
-    textMobile.classList.toggle('hide-text');
-  };
-  buttonText.addEventListener('click', showExtraText);
+  if (buttonText && text && textTablet && textMobile) {
+    const showExtraText = () => {
+      if (!text.classList.contains('hide-text')) {
+        buttonText.textContent = 'свернуть';
+        textTablet.style.display = 'block';
+        textMobile.style.display = 'block';
+        text.classList.add('hide-text');
+      } else {
+        buttonText.textContent = 'подробнее';
+        textMobile.style.display = 'none';
+        text.classList.remove('hide-text');
+        if (document.documentElement.clientWidth > 768) {
+          textTablet.style.display = 'block';
+        } else {
+          textTablet.style.display = 'none';
+        }
+      }
+    };
+    buttonText.addEventListener('click', showExtraText);
+  }
+  return;
 };
 
-export { showText };
+export {showText};
