@@ -6,11 +6,11 @@ const accordionToggle = () => {
     accordionButtons.forEach((button) => {
       button.addEventListener('click', () => {
         if (button.classList.contains('footer__title--acc')) {
-          button.nextElementSibling.style.display = 'none';
+          button.nextElementSibling.classList.toggle('footer__list--acc');
           button.classList.toggle('footer__title--acc');
           button.style.magrinBottom = '0';
         } else {
-          button.nextElementSibling.style.display = 'block';
+          button.nextElementSibling.classList.toggle('footer__list--acc');
           button.classList.toggle('footer__title--acc');
           button.style.magrinBottom = '15px';
         }
@@ -20,17 +20,4 @@ const accordionToggle = () => {
   return;
 };
 
-const accordionHandler = () => {
-  const accordionList = document.querySelectorAll('[data-footer-list]');
-  accordionList.forEach((element) => {
-    if (document.documentElement.clientWidth < 768) {
-      element.style.display = 'none';
-    } else {
-      element.style.display = 'block';
-    }
-  });
-  accordionToggle();
-};
-
-
-export {accordionHandler};
+export {accordionToggle};

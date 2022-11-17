@@ -1877,6 +1877,10 @@ button,
     margin: 0 auto;
   }
 
+  .footer__list--acc {
+    display: none;
+  }
+
   .footer__logo-link {
     margin: 0 0 20px 25px;
   }
