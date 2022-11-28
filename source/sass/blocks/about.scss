@@ -4,14 +4,15 @@
 
 .about__container {
   max-width: 1260px;
-  padding: 5px 20px 120px 270px;
+  padding: 0 20px 117px 270px;
   margin: 0 auto;
   background-image: url("../img/background-2022.png");
   background-repeat: no-repeat;
-  background-position: 40px top;
+  background-position: 20px top;
 
   @include vp-1023 {
-    padding: 0 50px 80px 225px;
+    padding: 0 50px 78px 225px;
+    background-position: left 45px top;
   }
 
   @include vp-767 {
@@ -26,6 +27,7 @@
   line-height: 50px;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 12px;
 
   @include vp-767 {
     font-size: 28px;
@@ -40,7 +42,7 @@
   margin: 0;
 
   &:not(:nth-of-type(2)) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   @include vp-767 {

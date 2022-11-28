@@ -6,6 +6,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  letter-spacing: 0.05em;
   border-radius: 3px;
   background-color: $color-transparent;
   border: 1px solid $color-default-white;
@@ -29,6 +30,10 @@
 }
 
 .btn--popup {
+  width: 160px;
+  text-align: center;
+  margin-top: 6px;
+
   @include vp-1023 {
     display: none;
   }
@@ -52,7 +57,7 @@
   background-color: $color-neon-blue;
   border: none;
   font-size: 18px;
-  letter-spacing: 0.05em;
+  height: 55px;
   line-height: 21px;
   padding: 15px 0;
   margin-bottom: 20px;
@@ -60,13 +65,14 @@
   width: 100%;
 
   @include vp-1023 {
-    margin-left: 40px;
+    margin-left: 45px;
   }
 
   @include vp-767 {
     max-width: none;
     margin-left: 0;
     font-size: 14px;
+    height: 40px;
     line-height: 16px;
   }
 }
@@ -76,7 +82,8 @@
   color: $color-neon-blue;
   max-width: 180px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 25px;
+  height: 45px;
 
   @include vp-1023 {
     margin-top: 0;
@@ -84,16 +91,20 @@
 
   @include vp-767 {
     max-width: 160px;
-    margin-top: 20px;
+    margin-top: 18px;
+    height: 35px;
   }
 }
 
 .btn--question {
   background-color: $color-default-black;
   width: 100%;
+  font-size: 16px;
+  line-height: 19px;
   max-width: 265px;
   border: none;
-  padding: 15px 0;
+  padding: 0;
+  height: 45px;
 
   @include vp-767 {
     max-width: none;

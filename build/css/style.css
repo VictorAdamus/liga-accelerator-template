@@ -632,6 +632,7 @@ button,
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  letter-spacing: 0.05em;
   border-radius: 3px;
   background-color: transparent;
   border: 1px solid #f2f5f6;
@@ -654,6 +655,12 @@ button,
   opacity: 0.8;
 }
 
+.btn--popup {
+  width: 160px;
+  text-align: center;
+  margin-top: 6px;
+}
+
 .btn__title--mobile {
   display: none;
 }
@@ -662,7 +669,7 @@ button,
   background-color: #00b2ff;
   border: none;
   font-size: 18px;
-  letter-spacing: 0.05em;
+  height: 55px;
   line-height: 21px;
   padding: 15px 0;
   margin-bottom: 20px;
@@ -675,15 +682,19 @@ button,
   color: #00b2ff;
   max-width: 180px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 25px;
+  height: 45px;
 }
 
 .btn--question {
   background-color: #041827;
   width: 100%;
+  font-size: 16px;
+  line-height: 19px;
   max-width: 265px;
   border: none;
-  padding: 15px 0;
+  padding: 0;
+  height: 45px;
 }
 
 .header__container {
@@ -694,12 +705,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -727,6 +735,15 @@ button,
 
 .header__link--logo {
   padding: 0;
+  margin-right: 150px;
+}
+
+.header__link--post {
+  margin-right: 100px;
+}
+
+.header__link--tel {
+  margin-right: 155px;
 }
 
 .header__link-icon {
@@ -744,10 +761,10 @@ button,
 }
 
 .intro__container {
-  max-width: 760px;
+  max-width: 1260px;
   text-align: left;
   margin: 0 auto;
-  padding: 305px 20px 260px;
+  padding: 320px 20px 260px 145px;
 }
 
 .intro h1 {
@@ -759,13 +776,14 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .intro p {
   color: #f2f5f6;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 46px;
+  max-width: 650px;
   font-size: 22px;
   line-height: 34px;
   font-family: "PT Mono", "Courier New", monospace;
@@ -797,13 +815,14 @@ button,
   border-left: 5px solid #00b2ff;
   padding: 40px 40px 20px;
   min-height: 300px;
+  height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
 }
 
 .advantages__icon {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   fill: #00b2ff;
 }
 
@@ -813,7 +832,7 @@ button,
   font-size: 24px;
   line-height: 34px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-weight: 400;
 }
 
@@ -845,11 +864,11 @@ button,
 
 .about__container {
   max-width: 1260px;
-  padding: 5px 20px 120px 270px;
+  padding: 0 20px 117px 270px;
   margin: 0 auto;
   background-image: url("../img/background-2022.png");
   background-repeat: no-repeat;
-  background-position: 40px top;
+  background-position: 20px top;
 }
 
 .about h2 {
@@ -858,6 +877,7 @@ button,
   line-height: 50px;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 12px;
 }
 
 .about p {
@@ -868,7 +888,7 @@ button,
 }
 
 .about p:not(:nth-of-type(2)) {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .about__text-mobile {
@@ -880,7 +900,7 @@ button,
 }
 
 .products__container {
-  padding: 70px 20px 120px;
+  padding: 66px 20px 120px;
   margin: 0 auto;
   max-width: 1260px;
 }
@@ -892,7 +912,7 @@ button,
   font-size: 36px;
   line-height: 50px;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 .products__title--mobile {
@@ -922,7 +942,7 @@ button,
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 0 0 40px;
+  padding: 46px 0 0 40px;
   min-height: 650px;
   background-color: #00b2ff;
   cursor: pointer;
@@ -974,7 +994,7 @@ button,
 .feedback__container {
   max-width: 1260px;
   margin: 0 auto;
-  padding: 170px 20px 230px 20px;
+  padding: 165px 20px 250px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -983,7 +1003,7 @@ button,
   justify-content: flex-end;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background: url("../img/paper-airplane-desktop.png") center left/510px 285px no-repeat;
+  background: url("../img/paper-airplane-desktop.png") top 245px left 20px/510px 285px no-repeat;
 }
 
 .feedback__form {
@@ -1002,17 +1022,15 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+}
+
+.footer__section--logo {
+  margin-right: 160px;
 }
 
 .footer__section--menu {
-  padding-right: 10px;
-}
-
-.footer__section--contacts {
-  max-width: 320px;
+  width: 395px;
+  margin-right: 100px;
 }
 
 .footer__list {
@@ -1033,7 +1051,7 @@ button,
 
 .footer__item {
   list-style-type: none;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .footer__link {
@@ -1056,6 +1074,7 @@ button,
   line-height: 16px;
   letter-spacing: 0.05em;
   margin: 0;
+  padding-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -1089,11 +1108,11 @@ button,
 }
 
 .footer__list--social {
-  margin-left: 10px;
+  margin-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 150px;
+  width: 140px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1224,25 +1243,28 @@ button,
   margin-bottom: 20px;
 }
 
+.form {
+  padding-left: 18px;
+}
+
 .form__content h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #f2f5f6;
   font-size: 36px;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 51px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .form__content p {
   color: #f2f5f6;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .form__field {
   margin: 0;
-  margin-left: 5px;
   max-width: 580px;
   border: none;
   padding: 0;
@@ -1312,8 +1334,7 @@ button,
   max-width: 580px;
   width: 100%;
   min-height: 155px;
-  margin-left: 5px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .form textarea::-webkit-input-placeholder {
@@ -1345,7 +1366,6 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 5px;
 }
 
 .form__footer--modal {
@@ -1360,6 +1380,12 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 0;
+}
+
+.form__checkbox {
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
 }
 
 .form__checkbox input {
@@ -1420,17 +1446,17 @@ button,
   display: block;
 }
 
-.form h2 {
+.form__content--modal h2 {
   font-size: 30px;
   line-height: 42px;
 }
 
-.form p {
+.form__content--modal p {
   font-size: 16px;
   margin-bottom: 40px;
 }
 
-.form--modal textarea {
+.form__content--modal textarea {
   margin-left: 0;
   margin-bottom: 25px;
 }
@@ -1482,7 +1508,7 @@ button,
   }
 
   .btn--to-form {
-    margin-left: 40px;
+    margin-left: 45px;
   }
 
   .btn--detailed {
@@ -1510,6 +1536,10 @@ button,
     margin-left: auto;
   }
 
+  .header__link--tel {
+    margin-right: 0;
+  }
+
   .header__link-icon {
     margin-right: 0;
   }
@@ -1524,13 +1554,18 @@ button,
   }
 
   .intro__container {
-    padding: 180px 50px 185px;
+    padding: 192px 50px 185px;
     max-width: 100%;
   }
 
   .intro h1 {
     font-size: 64px;
     line-height: 75px;
+    margin-bottom: 0;
+  }
+
+  .intro p {
+    margin-bottom: 58px;
   }
 
   .advantages__container {
@@ -1538,15 +1573,21 @@ button,
   }
 
   .advantages__item {
-    padding: 40px 40px 35px;
+    padding: 34px 40px 0;
+    min-height: 360px;
   }
 
   .about__container {
-    padding: 0 50px 80px 225px;
+    padding: 0 50px 78px 225px;
+    background-position: left 45px top;
   }
 
   .products__container {
-    padding: 60px 50px 55px;
+    padding: 55px 50px 55px;
+  }
+
+  .products__title {
+    margin-bottom: 40px;
   }
 
   .products__list {
@@ -1582,7 +1623,7 @@ button,
   .feedback__container {
     background: none;
     background-color: #00b2ff;
-    padding: 50px 50px 105px;
+    padding: 45px 50px 127px;
   }
 
   .feedback__form {
@@ -1609,11 +1650,14 @@ button,
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-bottom: 35px;
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 
   .footer__section--menu {
     grid-area: menu;
+    width: auto;
+    margin-right: 150px;
   }
 
   .footer__section--contacts {
@@ -1646,6 +1690,10 @@ button,
     flex-direction: column;
   }
 
+  .footer__list--social {
+    margin-left: auto;
+  }
+
   .footer__logo-link {
     margin-bottom: 0;
   }
@@ -1657,6 +1705,18 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .form {
+    padding: 0;
+  }
+
+  .form__content h2 {
+    margin-bottom: 5px;
+  }
+
+  .form__content p {
+    margin-bottom: 25px;
   }
 
   .form__field {
@@ -1696,12 +1756,14 @@ button,
     max-width: none;
     margin-left: 0;
     font-size: 14px;
+    height: 40px;
     line-height: 16px;
   }
 
   .btn--detailed {
     max-width: 160px;
-    margin-top: 20px;
+    margin-top: 18px;
+    height: 35px;
   }
 
   .btn--question {
@@ -1709,12 +1771,17 @@ button,
   }
 
   .header__container {
-    padding: 10px 35px 20px;
+    padding: 10px 35px 20px 25px;
   }
 
   .header__logo-picture {
     width: 35px;
     height: 35px;
+  }
+
+  .header__link--logo {
+    margin-top: 5px;
+    margin-right: 0;
   }
 
   .intro {
@@ -1723,19 +1790,19 @@ button,
   }
 
   .intro__container {
-    padding: 150px 25px 170px;
+    padding: 165px 25px 170px;
   }
 
   .intro h1 {
     font-size: 36px;
     line-height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .intro p {
     font-size: 14px;
     line-height: 21px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .advantages__container {
@@ -1748,8 +1815,14 @@ button,
   }
 
   .advantages__item {
-    min-height: 325px;
-    padding: 30px;
+    min-height: 340px;
+    padding: 30px 25px 10px;
+  }
+
+  .advantages__icon {
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
   }
 
   .advantages__item h3 {
@@ -1798,7 +1871,7 @@ button,
     line-height: 39px;
     padding-right: 10px;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 23px;
   }
 
   .products__link::before {
@@ -1823,11 +1896,12 @@ button,
 
   .products__link {
     padding: 30px;
+    padding-top: 27px;
     min-height: 250px;
   }
 
   .feedback__container {
-    padding: 50px 25px 70px;
+    padding: 50px 25px 85px;
   }
 
   .footer__container {
@@ -1865,16 +1939,13 @@ button,
 
   .footer__section h2 {
     margin-bottom: 0;
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 25px;
     cursor: pointer;
   }
 
-  .footer__link--show {
-    display: block;
-  }
-
   .footer__list--social {
-    margin: 0 auto;
+    margin: 0 auto 23px;
   }
 
   .footer__list--acc {
@@ -1892,19 +1963,23 @@ button,
   .form__content h2 {
     font-size: 30px;
     line-height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   .form__content p {
     font-size: 14px;
     line-height: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .form__field {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .form textarea {
+    margin-bottom: 50px;
   }
 
   .form__footer {
