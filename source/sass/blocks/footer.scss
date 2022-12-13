@@ -1,5 +1,6 @@
 .footer {
   background-color: $color-default-black;
+  margin-top: -2px;
 }
 
 .footer__container {
@@ -38,8 +39,9 @@
 }
 
 .footer__section--menu {
-  width: 395px;
   margin-right: 100px;
+  width: 470px;
+
   @include vp-1023 {
     grid-area: menu;
     width: auto;
@@ -77,9 +79,7 @@
 
 .footer__list--menu {
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(4, auto);
-  column-gap: 30px;
+  grid-template-columns: repeat(2, 220px);
 
   @include vp-1023 {
     display: flex;
@@ -90,6 +90,8 @@
 .footer__item {
   list-style-type: none;
   margin-bottom: 7px;
+  max-width: 220px;
+  width: 100%;
 }
 
 .footer__link {
@@ -100,6 +102,18 @@
   font-style: normal;
   color: $color-transparent-white;
   cursor: pointer;
+
+  @include hover {
+    color: $color-default-white;
+  }
+
+  &--address {
+    cursor: default;
+
+    @include hover {
+      color: $color-transparent-white;
+    }
+  }
 }
 
 .footer__section h2 {
@@ -162,7 +176,8 @@
   margin-left: 15px;
   display: flex;
   width: 140px;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 
   @include vp-1023 {
     margin-left: auto;
@@ -171,6 +186,10 @@
   @include vp-767 {
     margin: 0 auto 23px;
   }
+}
+
+.footer__social-item:not(:nth-child(3n)) {
+  margin-right: 25px;
 }
 
 .footer__list--acc {
@@ -182,6 +201,7 @@
 .footer__logo-link {
   display: block;
   margin-bottom: 35px;
+  cursor: default;
 
   @include vp-1023 {
     margin-bottom: 0;
@@ -194,4 +214,8 @@
 
 .footer__social-icon {
   fill: $color-default-background;
+
+  @include hover {
+    fill: $color-transparent-white;
+  }
 }

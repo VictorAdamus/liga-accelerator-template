@@ -36,7 +36,6 @@
   min-height: 300px;
   height: 100%;
   box-sizing: border-box;
-  cursor: pointer;
 
   @include vp-1023 {
     padding: 34px 40px 0;
@@ -91,6 +90,7 @@
 
 .advantages__item:hover {
   background-color: $color-neon-blue;
+  border: none;
 }
 
 .advantages__item:hover > h3,

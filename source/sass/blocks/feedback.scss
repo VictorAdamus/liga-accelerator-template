@@ -9,14 +9,10 @@
 .feedback__container {
   max-width: 1260px;
   margin: 0 auto;
-  padding: 165px 20px 250px 20px;
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  background: url("../img/paper-airplane-desktop.png") top 245px left 20px / 510px 285px no-repeat;
+  padding: 170px 20px 250px;
 
-  @include vp-1023 {
-    background: none;
+   @include vp-1023 {
     background-color: $color-neon-blue;
     padding: 45px 50px 127px;
   }
@@ -26,7 +22,21 @@
   }
 }
 
+.feedback__picture {
+  max-width: 510px;
+  width: 100%;
+  background-image: url("../img/paper-airplane-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
 .feedback__form {
+  margin-left: auto;
   min-width: 580px;
   max-width: 50%;
 
