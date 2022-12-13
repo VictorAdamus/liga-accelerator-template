@@ -838,6 +838,11 @@ button,
   box-sizing: border-box;
 }
 
+.advantages__item:nth-child(3),
+.advantages__item:nth-child(4) {
+  min-height: 325px;
+}
+
 .advantages__icon {
   margin-bottom: 13px;
   fill: #00b2ff;
@@ -1015,7 +1020,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 170px 20px 250px;
+  padding: 165px 20px 250px;
 }
 
 .feedback__picture {
@@ -1024,7 +1029,7 @@ button,
   background-image: url("../img/paper-airplane-desktop.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: center top 80px;
 }
 
 .feedback__form {
@@ -1041,19 +1046,27 @@ button,
 .footer__container {
   max-width: 1260px;
   margin: 0 auto;
-  padding: 50px 20px 55px;
+  padding: 55px 20px 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 280px;
 }
 
 .footer__section--logo {
-  margin-right: 160px;
+  margin-right: 130px;
 }
 
 .footer__section--menu {
-  margin-right: 100px;
   width: 470px;
+}
+
+.footer__section--contacts {
+  max-width: 345px;
+  width: 100%;
 }
 
 .footer__list {
@@ -1061,11 +1074,41 @@ button,
   margin: 0;
 }
 
+.footer__list--social {
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .footer__list--menu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (220px)[2];
-  grid-template-columns: repeat(2, 220px);
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.footer__input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.footer__list--menu,
+.footer__list--contacts {
+  margin-top: 20px;
+}
+
+.footer__input:checked ~ .footer__list {
+  display: block;
 }
 
 .footer__item {
@@ -1073,6 +1116,10 @@ button,
   margin-bottom: 7px;
   max-width: 220px;
   width: 100%;
+}
+
+.footer__list--contacts .footer__item {
+  min-width: 345px;
 }
 
 .footer__link {
@@ -1089,7 +1136,7 @@ button,
   cursor: default;
 }
 
-.footer__section h2 {
+.footer__title {
   position: relative;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #f2f5f6;
@@ -1100,10 +1147,9 @@ button,
   letter-spacing: 0.05em;
   margin: 0;
   padding-top: 10px;
-  margin-bottom: 20px;
 }
 
-.footer__section h2::after {
+.footer__title::after {
   content: "";
   display: none;
   position: absolute;
@@ -1114,7 +1160,7 @@ button,
   right: 0;
 }
 
-.footer__section h2::before {
+.footer__title::before {
   content: "";
   display: none;
   position: absolute;
@@ -1128,21 +1174,8 @@ button,
   transform: rotate(90deg);
 }
 
-.footer__section .footer__title--acc::before {
+.footer__input:checked ~ .footer__title::before {
   display: none;
-}
-
-.footer__list--social {
-  margin-left: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 140px;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .footer__social-item:not(:nth-child(3n)) {
@@ -1225,6 +1258,7 @@ button,
 .modal__content {
   position: relative;
   width: 500px;
+  height: 610px;
   padding: 40px;
   background-color: #00b2ff;
 }
@@ -1277,6 +1311,10 @@ button,
 
 .form {
   padding-left: 18px;
+}
+
+.form--modal {
+  padding-left: 0;
 }
 
 .form__content h2 {
@@ -1428,6 +1466,10 @@ button,
   width: 0;
 }
 
+.form__checkbox input:focus ~ .form__checkbox-text {
+  outline: 1px solid rgba(255, 255, 255, 0.7);
+}
+
 .form__checkbox-label {
   position: relative;
   cursor: pointer;
@@ -1437,6 +1479,14 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.form__checkbox-label:hover .form__checkbox-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form__checkbox-label:hover .form__checkbox-checkmark {
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .form__checkbox-text {
@@ -1481,16 +1531,17 @@ button,
 .form__content--modal h2 {
   font-size: 30px;
   line-height: 42px;
+  margin-bottom: 0;
 }
 
 .form__content--modal p {
   font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .form__content--modal textarea {
   margin-left: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* @mixin hover-focus {
@@ -1560,6 +1611,10 @@ button,
 
   .header__wrapper--contact {
     margin-left: auto;
+    margin-top: 5px;
+    max-width: 270px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -1575,7 +1630,7 @@ button,
   }
 
   .header__link--tel {
-    margin-right: 0;
+    margin-right: 10px;
   }
 
   .header__link-icon {
@@ -1679,6 +1734,7 @@ button,
   }
 
   .footer__section--logo {
+    width: 100%;
     grid-area: logo;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1697,8 +1753,8 @@ button,
 
   .footer__section--menu {
     grid-area: menu;
-    width: auto;
-    margin-right: 150px;
+    width: 220px;
+    margin-right: 130px;
   }
 
   .footer__section--contacts {
@@ -1721,6 +1777,10 @@ button,
     -ms-grid-column: 2;
   }
 
+  .footer__list--social {
+    margin-right: 25px;
+  }
+
   .footer__list--menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1729,10 +1789,6 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-
-  .footer__list--social {
-    margin-left: auto;
   }
 
   .footer__logo-link {
@@ -1797,7 +1853,9 @@ button,
     max-width: none;
     margin-left: 0;
     font-size: 14px;
-    height: 40px;
+    min-height: auto;
+    max-height: 40px;
+    height: 100%;
     line-height: 16px;
   }
 
@@ -1813,6 +1871,10 @@ button,
 
   .header__container {
     padding: 10px 35px 20px 25px;
+  }
+
+  .header__wrapper--contact {
+    max-width: 200px;
   }
 
   .header__logo-picture {
@@ -1869,6 +1931,7 @@ button,
   .advantages__item h3 {
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 10px;
   }
 
   .advantages p {
@@ -1942,7 +2005,7 @@ button,
   }
 
   .feedback__container {
-    padding: 50px 25px 85px;
+    padding: 50px 25px 90px;
   }
 
   .footer__container {
@@ -1970,23 +2033,30 @@ button,
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
-  .footer__section h2::after {
+  .footer__list--social {
+    margin: 0 auto 23px;
+  }
+
+  .footer__list--menu,
+  .footer__list--contacts {
+    display: none;
+  }
+
+  .footer__title::after {
     display: block;
   }
 
-  .footer__section h2::before {
+  .footer__title::before {
     display: block;
   }
 
-  .footer__section h2 {
+  .footer__title {
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 25px;
+    display: block;
+    width: 100%;
     cursor: pointer;
-  }
-
-  .footer__list--social {
-    margin: 0 auto 23px;
   }
 
   .footer__list--acc {
@@ -2054,5 +2124,13 @@ button,
 
   .footer__social-icon:hover:not(.focus-visible) {
     fill: rgba(255, 255, 255, 0.7);
+  }
+
+  .form__field input:hover:not(.focus-visible) {
+    background-color: rgba(4, 20, 39, 0.35);
+  }
+
+  .form textarea:hover:not(.focus-visible) {
+    background-color: rgba(4, 20, 39, 0.35);
   }
 }

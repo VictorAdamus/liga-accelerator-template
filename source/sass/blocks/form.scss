@@ -4,6 +4,10 @@
   @include vp-1023 {
     padding: 0;
   }
+
+  &--modal {
+    padding-left: 0;
+  }
 }
 
 .form__content h2 {
@@ -89,6 +93,10 @@
   @include vp-1023 {
     max-width: none;
   }
+
+  @include hover {
+    background-color: rgba(4, 20, 39, 0.35);
+  }
 }
 
 .form__field--modal input {
@@ -121,6 +129,10 @@
 
   @include vp-767 {
     margin-bottom: 50px;
+  }
+
+  @include hover {
+    background-color: rgba(4, 20, 39, 0.35);
   }
 }
 
@@ -160,11 +172,22 @@
   width: 0;
 }
 
+.form__checkbox input:focus ~ .form__checkbox-text{
+  outline: 1px solid $color-transparent-white;
+}
+
 .form__checkbox-label {
   position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.form__checkbox-label:hover  .form__checkbox-text {
+  color: $color-transparent-white;
+}
+.form__checkbox-label:hover  .form__checkbox-checkmark {
+  border-color: $color-transparent-white;
 }
 
 .form__checkbox-text {
@@ -212,14 +235,15 @@
 .form__content--modal h2 {
   font-size: 30px;
   line-height: 42px;
+  margin-bottom: 0;
 }
 
 .form__content--modal p {
   font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .form__content--modal textarea {
   margin-left: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }

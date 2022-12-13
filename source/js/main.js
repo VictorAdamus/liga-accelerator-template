@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {scrollToFeedback} from './utils/scroll-to-form';
-import {accordionToggle} from './utils/accordion';
 import {showText} from './utils/extraTextHandler';
 // ---------------------------------
 
@@ -9,7 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-  accordionToggle();
   showText();
   scrollToFeedback();
   iosVhFix();
