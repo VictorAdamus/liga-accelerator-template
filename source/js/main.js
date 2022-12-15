@@ -2,12 +2,14 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {scrollToFeedback} from './utils/scroll-to-form';
 import {showText} from './utils/extraTextHandler';
+import {formChecked} from './utils/form-checked';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+  formChecked();
   showText();
   scrollToFeedback();
   iosVhFix();
