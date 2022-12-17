@@ -1452,10 +1452,17 @@ button,
   gap: 0;
 }
 
+.form__footer--modal .form__checkbox {
+  margin-left: 10px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
 .form__checkbox {
-  -ms-flex-item-align: end;
-  -ms-grid-row-align: end;
-  align-self: end;
+  margin-top: 2px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .form__checkbox input {
@@ -1541,7 +1548,7 @@ button,
 
 .form__content--modal textarea {
   margin-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 /* @mixin hover-focus {
@@ -1596,6 +1603,10 @@ button,
 
   .btn--detailed {
     margin-top: 0;
+  }
+
+  .btn--question {
+    padding-top: 8px;
   }
 
   .header__container {
@@ -1676,7 +1687,7 @@ button,
   }
 
   .products__container {
-    padding: 55px 50px 55px;
+    padding: 55px 50px 57px;
   }
 
   .products__title {
@@ -1789,6 +1800,9 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
   }
 
   .footer__logo-link {
@@ -1826,8 +1840,10 @@ button,
   }
 
   .form textarea {
+    padding-top: 28px;
     margin-left: 0;
     min-width: 100%;
+    margin-bottom: 32px;
   }
 
   .form__footer {
@@ -2021,6 +2037,7 @@ button,
 
   .footer__section--menu {
     padding-right: 0;
+    width: 100%;
   }
 
   .footer__section--contacts {
@@ -2037,9 +2054,31 @@ button,
     margin: 0 auto 23px;
   }
 
+  .footer__list--menu {
+    width: 100%;
+  }
+
   .footer__list--menu,
   .footer__list--contacts {
+    margin-top: 0;
     display: none;
+    margin-top: -5px;
+  }
+
+  .footer__list--contacts .footer__item:nth-child(1) {
+    margin-bottom: 17px;
+  }
+
+  .footer__item {
+    line-height: 18px;
+  }
+
+  .footer__list--contacts .footer__item {
+    min-width: 100%;
+  }
+
+  .footer__link {
+    font-size: 14px;
   }
 
   .footer__title::after {
@@ -2053,14 +2092,10 @@ button,
   .footer__title {
     margin-bottom: 0;
     padding-top: 0;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
     display: block;
     width: 100%;
     cursor: pointer;
-  }
-
-  .footer__list--acc {
-    display: none;
   }
 
   .footer__logo-link {
@@ -2089,14 +2124,35 @@ button,
     gap: 20px;
   }
 
+  .form__field input {
+    padding-top: 13px;
+  }
+
   .form textarea {
-    margin-bottom: 50px;
+    padding-top: 22px;
+    margin-bottom: 28px;
+    min-height: 180px;
   }
 
   .form__footer {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
     gap: 25px;
+  }
+
+  .form__checkbox {
+    margin-top: 0;
+    margin-left: 5px;
+  }
+
+  .form__checkbox-label {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .form__checkbox-checkmark {
+    margin-top: 6px;
   }
 }
 

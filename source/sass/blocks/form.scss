@@ -94,14 +94,14 @@
     max-width: none;
   }
 
+  @include vp-767 {
+    padding-top: 13px;
+  }
+
   @include hover {
     background-color: rgba(4, 20, 39, 0.35);
   }
 }
-
-// .form__field input:invalid {
-//   outline: 1px solid red;
-// }
 
 .form__field--modal input {
   max-width: 100%;
@@ -127,12 +127,16 @@
   }
 
   @include vp-1023 {
+    padding-top: 28px;
     margin-left: 0;
     min-width: 100%;
+    margin-bottom: 32px;
   }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    padding-top: 22px;
+    margin-bottom: 28px;
+    min-height: 180px;
   }
 
   @include hover {
@@ -164,8 +168,19 @@
   }
 }
 
+.form__footer--modal .form__checkbox {
+  margin-left: 10px;
+  align-self: flex-start;
+}
+
 .form__checkbox {
-  align-self: end;
+  margin-top: 2px;
+  align-self: center;
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-left: 5px;
+  }
 }
 
 .form__checkbox input {
@@ -185,6 +200,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  @include vp-767 {
+    align-items: flex-start;
+  }
 }
 
 .form__checkbox-label:hover  .form__checkbox-text {
@@ -216,6 +235,10 @@
   border: 1px solid #ffffff;
   border-radius: 2px;
   margin-right: 10px;
+
+  @include vp-767 {
+    margin-top: 6px;
+  }
 }
 
 .form__checkbox-checkmark::after {
@@ -249,5 +272,5 @@
 
 .form__content--modal textarea {
   margin-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
